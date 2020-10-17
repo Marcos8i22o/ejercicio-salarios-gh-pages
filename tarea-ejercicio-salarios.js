@@ -8,17 +8,17 @@ menor salario anual, salario anual promedio y salario mensual promedio.
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
 
-const $form = document.querySelector('#formulario-salarios-familiar');
-
-const $botonAgregarIntegrante = $form['#agregar-integrante'];
-const $botonQuitarIntegrante = $form['#quitar-integrante'];
-const $botonCalcular = $form['#calculos'];
+const $botonAgregarIntegrante = document.querySelector('#agregar-integrante')
+const $botonQuitarIntegrante = document.querySelector('#quitar-integrante');
+const $botonCalcular = document.querySelector('#calculos');
 
 $botonAgregarIntegrante.onclick = function(){
+    agregarIntegrante();
     return false;
 }
 
 $botonQuitarIntegrante.onclick = function(){
+    quitarIntegrante();
     return false;
 }
 
