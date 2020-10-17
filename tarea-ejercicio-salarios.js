@@ -12,13 +12,17 @@ const $botonAgregarIntegrante = document.querySelector('#agregar-integrante')
 const $botonQuitarIntegrante = document.querySelector('#quitar-integrante');
 const $botonCalcular = document.querySelector('#calculos');
 
+const $integrantesTrabajadores = document.querySelector(
+    "#integrantes-trabajadores"
+  );
+
 $botonAgregarIntegrante.onclick = function(){
-    agregarIntegrante();
+    agregarIntegrante($integrantesTrabajadores);
     return false;
 }
 
 $botonQuitarIntegrante.onclick = function(){
-    quitarIntegrante();
+    quitarIntegrante($integrantesTrabajadores);
     return false;
 }
 
