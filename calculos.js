@@ -46,3 +46,18 @@ function salarioAnualPromedio(salariosAnuales) {
 }
 
 function salarioMensualPromedio(salariosAnuales) {}
+function obtenerSalarioMensualPromedio(salariosAnuales) {
+  const MESES_DEL_ANIO = 12;
+  const salarioMensual = [];
+  
+  for (let i = 0; i < salariosAnuales.length; i++) {
+    salarioMensual[i] = Number(salariosAnuales[i].value) / MESES_DEL_ANIO;
+  }
+  
+  let sumaSalariosMensuales = 0;
+  for (let i = 0; i < salarioMensual.length; i++) {
+    sumaSalariosMensuales += salarioMensual[i];
+  }
+
+  return sumaSalariosMensuales / salarioMensual.length;
+}
