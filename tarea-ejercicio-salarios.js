@@ -28,4 +28,7 @@ $botonQuitarIntegrante.onclick = function(){
 
 $botonCalcular.onclick = function(){
     
+    const salariosAnuales = document.querySelectorAll('.salarios-anuales');
+    calcularSalarios(salariosAnuales);
 }
+
