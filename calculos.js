@@ -1,8 +1,8 @@
-function calcularSalarios(salariosAnuales) {
-  obtenerMayorSalarioAnual(salariosAnuales);
-  obtenerMenorSalarioAnual(salariosAnuales);
-  obtenerSalarioAnualPromedio(salariosAnuales);
-  obtenerSalarioMensualPromedio(salariosAnuales);
+function calcularSalarios(salariosAnuales,resultados) {
+  resultados.push(obtenerMayorSalarioAnual(salariosAnuales));
+  resultados.push(obtenerMenorSalarioAnual(salariosAnuales));
+  resultados.push(obtenerSalarioAnualPromedio(salariosAnuales));
+  resultados.push(obtenerSalarioMensualPromedio(salariosAnuales));
 }
 
 function obtenerMayorSalarioAnual(salariosAnuales) {
@@ -20,10 +20,9 @@ function obtenerMayorSalarioAnual(salariosAnuales) {
 }
 
 function obtenerMenorSalarioAnual(salariosAnuales) {
-  let minimoSalario;
+  let minimoSalario = Number(salariosAnuales[0].value);
 
-  for (let i = 0; i < salariosAnuales.length; i++) {
-    //if (!minimoSalario) {
+  for (let i = 1; i < salariosAnuales.length; i++) {
       if (
         Number(salariosAnuales[i].value) != 0 &&
         Number(salariosAnuales[i].value) < minimoSalario
