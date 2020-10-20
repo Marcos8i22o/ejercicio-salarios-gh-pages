@@ -6,6 +6,7 @@ function agregarIntegrante($integrantesTrabajadores) {
 
   $salarioAnual.type = "number";
   $salarioAnual.placeholder = "Ingrese su salario anual";
+  $salarioAnual.className = "salarios-anuales";
 
   $integrante.appendChild($salarioAnual);
   $integrantesTrabajadores.appendChild($integrante);
