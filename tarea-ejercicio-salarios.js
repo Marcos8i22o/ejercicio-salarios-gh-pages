@@ -34,14 +34,13 @@ $botonQuitarIntegrante.onclick = function () {
 
 $botonCalcular.onclick = function () {
   const salariosAnuales = document.querySelectorAll(".salarios-anuales");
-  const resultados = {};
-
-  calcularSalarios(salariosAnuales, resultados);
+  
+  const salariosCalculados = calcularSalarios(salariosAnuales);
 
   document.querySelector("#salarios").className = "";
 
-  mostrarResultados("#mayor-salario-anual", resultados.mayorSalario);
-  mostrarResultados("#menor-salario-anual", resultados.menorSalario);
-  mostrarResultados("#salario-anual-promedio", resultados.anualPromedio);
-  mostrarResultados("#salario-mensual-promedio", resultados.mensualPromedio);
+  mostrarResultados("#mayor-salario-anual", salariosCalculados.mayorSalario);
+  mostrarResultados("#menor-salario-anual", salariosCalculados.menorSalario);
+  mostrarResultados("#salario-anual-promedio", salariosCalculados.anualPromedio);
+  mostrarResultados("#salario-mensual-promedio", salariosCalculados.mensualPromedio);
 };

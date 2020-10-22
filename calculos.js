@@ -1,8 +1,12 @@
-function calcularSalarios(salariosAnuales,resultados) {
+function calcularSalarios(salariosAnuales) {
+  const resultados = {};
+
   resultados.mayorSalario = obtenerMayorSalarioAnual(salariosAnuales);
   resultados.menorSalario = obtenerMenorSalarioAnual(salariosAnuales);
   resultados.anualPromedio = obtenerSalarioAnualPromedio(salariosAnuales);
   resultados.mensualPromedio = obtenerSalarioMensualPromedio(salariosAnuales);
+
+  return resultados;
 }
 
 function obtenerMayorSalarioAnual(salariosAnuales) {
