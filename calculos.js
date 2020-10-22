@@ -12,27 +12,24 @@ function calcularSalarios(salariosAnuales) {
 function obtenerMayorSalarioAnual(salariosAnuales) {
   let maximoSalario = 0;
 
-  //const salarios = Number(salariosAnuales.value);
+  let salario;
   for (let i = 0; i < salariosAnuales.length; i++) {
-    if (
-      Number(salariosAnuales[i].value) != 0 &&
-      Number(salariosAnuales[i].value) > maximoSalario
-    ) {
-      maximoSalario = Number(salariosAnuales[i].value);
+    salario = Number(salariosAnuales[i].value);
+    if (salario != 0 && salario > maximoSalario) {
+      maximoSalario = salario;
     }
   }
   return maximoSalario;
 }
 
 function obtenerMenorSalarioAnual(salariosAnuales) {
-  let minimoSalario = Number(salariosAnuales[0].value);
+  let minimoSalario = Number(salariosAnuales[0].value); 
 
+  let salario;
   for (let i = 1; i < salariosAnuales.length; i++) {
-    if (
-      Number(salariosAnuales[i].value) != 0 &&
-      Number(salariosAnuales[i].value) < minimoSalario
-    ) {
-      minimoSalario = Number(salariosAnuales[i].value);
+    salario = Number(salariosAnuales[i].value);
+    if (salario != 0 && salario < minimoSalario) {
+      minimoSalario = salario;
     }
   }
   return minimoSalario;
