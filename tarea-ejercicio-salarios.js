@@ -21,7 +21,9 @@ function mostrarResultados(id, valor) {
 }
 
 $botonAgregarIntegrante.onclick = function () {
-  agregarIntegrante($integrantesTrabajadores);
+  const $integranteNuevo = agregarIntegrante($integrantesTrabajadores);
+  $integrantesTrabajadores.appendChild($integranteNuevo);
+
   return false;
 };
 
@@ -32,14 +34,14 @@ $botonQuitarIntegrante.onclick = function () {
 
 $botonCalcular.onclick = function () {
   const salariosAnuales = document.querySelectorAll(".salarios-anuales");
-  const resultados = [];
+  const resultados = {};
 
   calcularSalarios(salariosAnuales, resultados);
 
   document.querySelector("#salarios").className = "";
 
-  mostrarResultados("#mayor-salario-anual", resultados[0]);
-  mostrarResultados("#menor-salario-anual", resultados[1]);
-  mostrarResultados("#salario-anual-promedio", resultados[2]);
-  mostrarResultados("#salario-mensual-promedio", resultados[3]);
+  mostrarResultados("#mayor-salario-anual", resultados.mayorSalario);
+  mostrarResultados("#menor-salario-anual", resultados.menorSalario);
+  mostrarResultados("#salario-anual-promedio", resultados.anualPromedio);
+  mostrarResultados("#salario-mensual-promedio", resultados.mensualPromedio);
 };

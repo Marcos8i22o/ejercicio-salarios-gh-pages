@@ -9,7 +9,8 @@ function agregarIntegrante($integrantesTrabajadores) {
   $salarioAnual.className = "salarios-anuales";
 
   $integrante.appendChild($salarioAnual);
-  $integrantesTrabajadores.appendChild($integrante);
+  
+  return $integrante;
 }
 
 function quitarIntegrante($integrantesTrabajadores) {
