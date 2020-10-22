@@ -16,9 +16,6 @@ const $integrantesTrabajadores = document.querySelector(
   "#integrantes-trabajadores"
 );
 
-function mostrarResultados(id, valor) {
-  document.querySelector(id).textContent += valor;
-}
 
 $botonAgregarIntegrante.onclick = function () {
   const $integranteNuevo = agregarIntegrante($integrantesTrabajadores);
@@ -39,8 +36,8 @@ $botonCalcular.onclick = function () {
 
   document.querySelector("#salarios").className = "";
 
-  mostrarResultados("#mayor-salario-anual", salariosCalculados.mayorSalario);
-  mostrarResultados("#menor-salario-anual", salariosCalculados.menorSalario);
-  mostrarResultados("#salario-anual-promedio", salariosCalculados.anualPromedio);
-  mostrarResultados("#salario-mensual-promedio", salariosCalculados.mensualPromedio);
+  document.querySelector("#mayor-salario-anual").textContent = salariosCalculados.mayorSalario;
+  document.querySelector("#menor-salario-anual").textContent = salariosCalculados.menorSalario;
+  document.querySelector("#salario-anual-promedio").textContent = salariosCalculados.anualPromedio;
+  document.querySelector("#salario-mensual-promedio").textContent = salariosCalculados.mensualPromedio;
 };
