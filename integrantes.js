@@ -1,6 +1,4 @@
-function agregarIntegrante($integrantesTrabajadores) {
-  
-
+function agregarIntegrante() {
   const $integrante = document.createElement("li");
   const $salarioAnual = document.createElement("input");
 
@@ -9,12 +7,10 @@ function agregarIntegrante($integrantesTrabajadores) {
   $salarioAnual.className = "salarios-anuales";
 
   $integrante.appendChild($salarioAnual);
-  
+
   return $integrante;
 }
 
 function quitarIntegrante($integrantesTrabajadores) {
   $integrantesTrabajadores.removeChild($integrantesTrabajadores.firstChild);
 }
-
-
