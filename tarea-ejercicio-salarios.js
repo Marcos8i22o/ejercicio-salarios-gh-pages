@@ -16,8 +16,9 @@ const $integrantesTrabajadores = document.querySelector(
   "#integrantes-trabajadores"
 );
 
+
 $botonAgregarIntegrante.onclick = function () {
-  const $integranteNuevo = agregarIntegrante();
+  const $integranteNuevo = agregarIntegrante($integrantesTrabajadores);
   $integrantesTrabajadores.appendChild($integranteNuevo);
 
   return false;
@@ -30,17 +31,13 @@ $botonQuitarIntegrante.onclick = function () {
 
 $botonCalcular.onclick = function () {
   const salariosAnuales = document.querySelectorAll(".salarios-anuales");
-
+  
   const salariosCalculados = calcularSalarios(salariosAnuales);
 
   document.querySelector("#salarios").className = "";
 
-  document.querySelector("#mayor-salario-anual").textContent =
-    salariosCalculados.mayorSalario;
-  document.querySelector("#menor-salario-anual").textContent =
-    salariosCalculados.menorSalario;
-  document.querySelector("#salario-anual-promedio").textContent =
-    salariosCalculados.anualPromedio;
-  document.querySelector("#salario-mensual-promedio").textContent =
-    salariosCalculados.mensualPromedio;
+  document.querySelector("#mayor-salario-anual").textContent = salariosCalculados.mayorSalario;
+  document.querySelector("#menor-salario-anual").textContent = salariosCalculados.menorSalario;
+  document.querySelector("#salario-anual-promedio").textContent = salariosCalculados.anualPromedio;
+  document.querySelector("#salario-mensual-promedio").textContent = salariosCalculados.mensualPromedio;
 };
